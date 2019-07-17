@@ -1,11 +1,11 @@
 # Site settings
-author: elegant-intelligence-1985
-title: 
+author: CPHblogger
+title: So You Want to Learn to Code
 header-img: img/home-bg.png
 email: cp.halpenny@gmail.com
-copyright_name: elegant-intelligence-1985
+copyright_name: CPHblogger
 description: > # this means to ignore newlines until "baseurl:"
-  
+  Coding bootcamps are popping up all over. So what’s it like to attend?
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  chalpenny
