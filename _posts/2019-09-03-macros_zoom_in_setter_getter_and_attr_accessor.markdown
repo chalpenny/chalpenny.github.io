@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Macros Zoom In: setter, getter, & attr_accessor"
-date:       2019-09-04 03:04:08 +0000
+date:       2019-09-03 23:04:09 -0400
 permalink:  macros_zoom_in_setter_getter_and_attr_accessor
 ---
 
@@ -30,17 +30,19 @@ How does that method work?   This type of method is called a *setter* method (al
 
 ```def name=(name)```
 
-This is following the familiar pattern of defining a method
+This is following the familiar pattern of defining a method:
 
 ```def method_name(argument)```
 
-Note that our method is actually called "name=*.  
+Note that our method is actually called "name=".  
 
 Next is the body of the method:
 
 ```@name```
 
+
 This is an instance variable.  Different from a local variable which is only recognized within the method it was created in, an instance variable is recognized and can be used in other methods throughout that instance of that class.
+
 
 ```@name = name```
 
