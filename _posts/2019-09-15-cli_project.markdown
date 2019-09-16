@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "CLI Project"
-date:       2019-09-16 00:38:52 +0000
+date:       2019-09-15 20:38:53 -0400
 permalink:  cli_project
 ---
 
@@ -14,24 +14,24 @@ The fun part of this project was seeing the methods and pieces of Ruby come toge
 My code went through multiple iterations to come up with just this one step:
 
 ```   elsif @input == "1"
-            print_recipes
-            @input = gets.chomp
-            return_recipe(@input)```
+print_recipes
+@input = gets.chomp
+return_recipe(@input)```
 						
 Having built a CLI now, the process would probably be a lot quicker for me the next time.  I was on one hand surprised by how simple the program turned out to be to build, and at the same time, surprised by how long it took me to build it.  It involved about 16 missteps for every 1 step in the right direction.  I didn't use Test Driven Development to create this, as I have been for the other labs in this course, so a lot of time was spent making a change, running the program, and figuring out the error, then repeating the process until it was working.  Binding.pry proved it's worth 100 times over, as it gave me the chance to figure out why something wasn't working when I thought it should be, by checking values partway through the process of calling a method.
 
 One method I wish I'd been able to get working was a search-by-ingredient option.  I worked on the code for quite a while before finally scrapping the idea due to time constraints.  
 
 ```def self.find_by_ingredient(input)      
-           recipe = self.all.collect {|recipe| recipe.ingredients}
-           recipe.each do |string|         
-           string.split(", ").uniq.each do |word|         
-                      if word == input         
-                                 puts "#{recipe.name}   <- THIS LINE DOESN'T WORK     
-                      end       
-                 end      
-           end    
-     end```
+recipe = self.all.collect {|recipe| recipe.ingredients}
+recipe.each do |string|         
+string.split(", ").uniq.each do |word|         
+if word == input         
+puts "#{recipe.name}   <- THIS LINE DOESN'T WORK     
+end       
+end      
+end    
+end```
 
 Besides the fact that this method is in need of some good abstraction, it was very disappointing to get so close and not get it working.  I'm sure it's something another head and/or some experience will help me work out in the future.
 
