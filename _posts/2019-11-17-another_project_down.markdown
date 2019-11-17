@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Another Project Down"
-date:       2019-11-17 20:53:12 +0000
+title:      "Sinatra Project - Another Project Down"
+date:       2019-11-17 15:53:13 -0500
 permalink:  another_project_down
 ---
 
