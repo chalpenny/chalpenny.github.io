@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Building a Single Page Application with JavaScript and Rails"
-date:       2020-06-29 07:07:51 +0000
+date:       2020-06-29 03:07:52 -0400
 permalink:  building_a_single_page_application_with_javascript_and_rails
 ---
 
