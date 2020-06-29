@@ -26,8 +26,7 @@ Next, create your class:
     }
 }
 
-Activity.all = []
-```
+Activity.all = []```
 
 
 Be sure your attributes here match the attributes on your backend model.  You'll notice the use of the keyword *this* in our constructor.  *This* is similar to *self* in Ruby in that it refers to whatever instance it is part of.
@@ -76,5 +75,5 @@ In the example above, you see that every instance of this object will have a *gr
 
 Now that you have a class, you can begin to use associations with it.  If we were to create merely an object, not a class from the returned json data in our fetch method above, we wouldn't have to advantage of those associations.  With the appropriate has_many, etc ActiveRecord associations in your backend files, you can now call things like *activity.category_id* to see its belongs_to relationship.
 
-One last note about JS classes is that they are not a new feature, they existed in versions before ES6 as *prototypes*.  Constructed and used similarly, classes are merely syntactic sugar, designed to make a coder's life a little easier!
+One last note about JS classes is that they are not a new feature.  You may see them in legacy code before ES6 as *prototypes*.  Constructed and used similarly, classes are merely syntactic sugar, designed to make a coder's life a little easier!
 
