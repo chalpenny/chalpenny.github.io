@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "MapStateToProps & MapDispatchToProps - what are they doing, anyway?"
-date:       2020-09-04 16:33:15 +0000
+date:       2020-09-04 12:33:16 -0400
 permalink:  mapstatetoprops_and_mapdispatchtoprops_-_what_are_they_doing_anyway
 ---
 
@@ -12,7 +12,7 @@ First off, MapStateToProps and MapDispatchToProps are two functions that are pas
 
 As the name would suggest, connect() is used to connect a component to Redux (and the store). Ideally, our componnents are not aware of Redux.  They just get to focus on doing their own component-y thing.  Connect() gives us that separation of concerns that we're looking for.
 
-The first argument it takes is MapState to Props.  Its job is to provide only the parts of our store's state to the component that it needs, thus avoiding unneccesary changes to state (and unneccessary updates to the DOM).
+The first argument it takes is MapStateToProps.  Its job is to provide only the parts of our store's state to the component that it needs, thus avoiding unneccesary changes to state (and unneccessary updates to the DOM).
 
 MapState takes an argument of the store's state.  It's called every time that state changes, and returns the new state data that you've defined.
 
@@ -28,7 +28,7 @@ When changes occur to those props, connect can then determine if the store state
 
 The second argument is MapDispatchToProps.  Map Dispatch is a function that triggers an action to update the store.  Dispatching is the only way to trigger actions, so by adding this function to a component, you are giving that component the ability to update the store.  As this will trigger updates to the DOM at certain points, you will want to be sure you're using it only when needed.  (Remember, updating the DOM takes time and can slow down your app if it's done frequently.  We want to keep it at the minimum required).
 
-Once you impor connect(), whether you know it or not you now have access to dispatch.  In the export statement, if you don't specify the second argument for connect(), it will default to *dispatch*.
+Once you import connect(), whether you know it or not you now have access to dispatch.  In the export statement, if you don't specify the second argument for connect(), it will default to *dispatch*.
 
 ```export default connect(mapStateToProps)(ProductPage);```
 
@@ -50,11 +50,11 @@ To define your own MapDispatch function, you will pass dispatch as an argument, 
   }
 }```
 
-Because of how smart Redux is, you can even pass in an action creator directly to your component as props, as in:
+Because of how smart Redux is, you can even import an action creator directly to your component, as in:
 
 ```import { updateProductStatus } from '../actions/updateProductStatus';```
 
-and then pass it as your MapDispatch argument in your export statement:
+and then pass it as your MapDispatch argument in your export statement, which will then make it accessible as props:
 
 ```export default connect(null, {updateProductStatus}(UserCart); ```
 
